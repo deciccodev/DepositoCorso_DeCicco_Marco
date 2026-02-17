@@ -60,7 +60,7 @@ class Esercizi
         Console.WriteLine($"la somma dell'eta' e dell'altezza e': {somma}");*/
 
         //esercizio extra - 6
-        Console.Write("inserisci un numero: ");
+        /*Console.Write("inserisci un numero: ");
         string k1 = Console.ReadLine();
         Console.Write("\ninserisci un altro numero: ");
         string k2 = Console.ReadLine();
@@ -68,6 +68,73 @@ class Esercizi
         int tmp1 = int.Parse(k1);
         int tmp2 = int.Parse(k2);
 
-        Console.WriteLine($"il primo numero ed il secondo sono positivi? {tmp1 > 0 && tmp2 > 0} \nuno dei due numeri e' positivo? {tmp1 > 0 || tmp2 > 0} \nil primo numero e' positivo? {!(tmp1 > 0)}");
+        Console.WriteLine($"il primo numero ed il secondo sono positivi? {tmp1 > 0 && tmp2 > 0} \nuno dei due numeri e' positivo? {tmp1 > 0 || tmp2 > 0} \nil primo numero e' positivo? {!(tmp1 < 0)}");*/
+
+        //esercizio if - 1
+        /*Console.Write("inserisci la tua eta': ");
+        int eta = int.Parse(Console.ReadLine());
+        
+        if(eta >= 18)
+        {
+           Console.Write($"la tua eta' e' {eta}, sei maggiorenne! "); 
+        }*/
+
+        //esercizio if - 2
+        /*Console.Write("inserisci il prezzo del prodotto: ");
+        float prezzoProdotto = float.Parse(Console.ReadLine());
+
+        if(prezzoProdotto > 100)
+        {
+            Console.Write($"il prezzo del prodotto dopo lo sconto del 10% applicato e' di: {prezzoProdotto * 0.9f}.");
+        }
+
+        else
+            Console.Write($"il prodotto non è stato scontato in quanto il prezzo è di: {prezzoProdotto} euro.");*/
+
+        //esercizio extra - if
+        /*Console.Write("inserisci il primo numero: ");
+        float primo = float.Parse(Console.ReadLine());
+
+        Console.Write("inserisci il secondo numero: ");
+        float secondo = float.Parse(Console.ReadLine());
+
+        Console.Write("inserisci il terzo numero: ");
+        float terzo = float.Parse(Console.ReadLine());
+
+        float somma = primo + secondo + terzo;
+        float media = somma / 3;
+
+        if(media >= 60)
+        {
+            Console.Write($"Hai superato la prova! la media è uguale a: {media}");
+        }
+
+        else
+            Console.Write($"Prova fallita... la media è uguale a: {media}");*/
+
+        //esercizio extra 2 - if
+        Console.Write("inserisci il primo numero: ");
+        float primo = float.Parse(Console.ReadLine());
+
+        Console.Write("inserisci il secondo numero: ");
+        float secondo = float.Parse(Console.ReadLine());
+
+        //controllo AND
+        if(primo > 10 && secondo > 10)
+        {
+            Console.Write("entrambi i numeri sono maggiori di 10!\n");
+        }
+
+        //controllo OR
+        if(primo > 10 || secondo > 10)
+        {
+            Console.Write("almeno un numero è maggiore di 10!\n");
+        }
+
+        //controllo NOT
+        if(!(primo < 10))
+        {
+            Console.Write("il primo numero è maggiore di 10!");
+        }
     }
 }
