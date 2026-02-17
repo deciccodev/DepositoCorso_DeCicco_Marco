@@ -93,16 +93,16 @@ class Esercizi
 
         //esercizio extra - if
         /*Console.Write("inserisci il primo numero: ");
-        float primo = float.Parse(Console.ReadLine());
+        int primo = int.Parse(Console.ReadLine());
 
         Console.Write("inserisci il secondo numero: ");
-        float secondo = float.Parse(Console.ReadLine());
+        int secondo = int.Parse(Console.ReadLine());
 
         Console.Write("inserisci il terzo numero: ");
-        float terzo = float.Parse(Console.ReadLine());
+        int terzo = int.Parse(Console.ReadLine());
 
-        float somma = primo + secondo + terzo;
-        float media = somma / 3;
+        double somma = (double)(primo + secondo + terzo);
+        double media = somma / 3;
 
         if(media >= 60)
         {
