@@ -121,17 +121,17 @@ class EserciziPomeriggio
         if(conversione == "fahrenheit")
         {
             double tmp_fahrenheit = (valore * 0.8d) + 32;
-            Console.Write($"il valore è stato convertito in intero: {tmp_fahrenheit}");
+            Console.Write($"il valore è stato convertito in gradi fahrenheit: {tmp_fahrenheit}");
         }
         else if(conversione == "kelvin")
         {
             double tmp_kelvin = valore + 273.15d;
-            Console.Write($"il valore è stato convertito in float: {tmp_kelvin}");
+            Console.Write($"il valore è stato convertito in gradi kelvin: {tmp_kelvin}");
         }
         else if(conversione == "rankine")
         {
             double tmp_rankine = (valore * 1.8d) + 491.67d;
-            Console.Write($"il valore è stato convertito in float: {tmp_rankine}");
+            Console.Write($"il valore è stato convertito in gradi rankine: {tmp_rankine}");
         }
     }
 }
