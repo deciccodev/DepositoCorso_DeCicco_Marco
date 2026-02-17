@@ -115,22 +115,23 @@ class EserciziPomeriggio
         Console.Write("inserisci il valore da convertire: ");
         double valore = double.Parse(Console.ReadLine());
 
-        Console.Write("inserisci in cosa vuoi convertire il valore (scegli tra x, y, z): ");
+        Console.Write("inserisci in cosa vuoi convertire il valore (scegli tra fahrenheit, kelvin, rankine): ");
         string conversione = Console.ReadLine();
 
-        if(conversione == "x")
+        if(conversione == "fahrenheit")
         {
-            int tmp = (int)valore;
-            Console.Write($"il valore è stato convertito in intero: {tmp}");
+            double tmp_fahrenheit = (valore * 0.8d) + 32;
+            Console.Write($"il valore è stato convertito in intero: {tmp_fahrenheit}");
         }
-        else if(conversione == "y")
+        else if(conversione == "kelvin")
         {
-            float tmp = (float)valore;
-            Console.Write($"il valore è stato convertito in float: {tmp}");
+            double tmp_kelvin = valore + 273.15d;
+            Console.Write($"il valore è stato convertito in float: {tmp_kelvin}");
         }
-        else if(conversione == "z")
+        else if(conversione == "rankine")
         {
-            Console.Write("non sapevo in cosa convertirlo :')");
+            double tmp_rankine = (valore * 1.8d) + 491.67d;
+            Console.Write($"il valore è stato convertito in float: {tmp_rankine}");
         }
     }
 }
