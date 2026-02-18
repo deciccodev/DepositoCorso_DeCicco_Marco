@@ -5,7 +5,7 @@ class EserciziPomeriggio
     public static void Main(string[] args)
     {
         //ESERCIZIO ARRAY - FOREACH
-        /*bool continua = true;
+        bool continua = true;
 
         Console.WriteLine("Di che tipo vuoi creare il tuo array? (int/string): ");
         string scelta = Console.ReadLine();
@@ -76,11 +76,11 @@ class EserciziPomeriggio
                     Console.WriteLine("Errore di sistema");
                     break;
             }
-        } while (continua);*/ 
+        } while (continua);
 
 
         //ESERCIZIO FOREACH 1
-        /*Console.WriteLine("Inserisci una frase: ");
+        Console.WriteLine("Inserisci una frase: ");
         string frase = Console.ReadLine();
 
         char[] numeri = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
@@ -93,47 +93,95 @@ class EserciziPomeriggio
                 count++;
             }
         }
-        Console.WriteLine($"Nella frase sono contenuti {count} numeri");*/
+        Console.WriteLine($"Nella frase sono contenuti {count} numeri");
 
 
         //ESERCIZIO FOREACH 2
-        /*Console.WriteLine("Inserisci una frase: ");
-        string frase = Console.ReadLine();
+        Console.WriteLine("Inserisci una frase: ");
+        string frase2 = Console.ReadLine();
 
-        frase.Trim();
-        Console.WriteLine(frase);*/
+        string noSpazi = "";
+        
+        foreach (char carattere in frase2)
+        {
+            if (carattere != ' ')
+            {
+                noSpazi += carattere;
+            }
+        }
+        Console.WriteLine(noSpazi);
 
 
         //ESERCIZIO FOREACH 3
-        /*Console.WriteLine("Inserisci una frase: ");
-        string frase = Console.ReadLine();
+        Console.WriteLine("Inserisci una frase: ");
+        string frase3 = Console.ReadLine();
         int cont = 0;
 
         string confronto = "aeiou";
+        string risultato = frase3.ToLower();
 
         foreach (char carattere in confronto)
         {
-            if(frase.Contains(carattere))
+            if(risultato.Contains(carattere))
             {
                 cont++;
             }
         }
-        Console.WriteLine(cont);*/
+        Console.WriteLine(cont);
 
+
+        //ESERCIZIO FOREACH 4
+        Console.WriteLine("Inserisci una password: ");
+        string pass = Console.ReadLine();
+
+        bool isLegal = false;
+        int countPass = 0;
+
+        if(pass.Length >= 8)
+        {
+            if(!pass.StartsWith(' ') && !pass.EndsWith(' '))
+            {
+                foreach (char carattere in pass)
+                {
+                    if(char.IsUpper(carattere)) {countPass++;}                
+                }
+
+                if(countPass >= 1)
+                {
+                    countPass = 0;
+                    foreach (char carattere in pass)
+                    {
+                        if(char.IsDigit(carattere)) 
+                        {
+                            countPass++;
+                            isLegal = true;
+                        }                
+                    }
+                }
+            }
+        }
+        if(isLegal)
+        {
+            Console.WriteLine("Password accettabile!");
+        }
+        else
+        {
+            Console.WriteLine("Password NON accettabile!");
+        }
 
         //ESERCIZIO 5 FOREACH
         Console.WriteLine("Inserisci una frase: ");
-        string frase = Console.ReadLine();
+        string frase4 = Console.ReadLine();
         
         int countCar = 0, countSpazi = 0, countSegni = 0, countPar = 0;
-        string[] parole = frase.Split(' ');
+        string[] parole = frase4.Split(' ');
 
         foreach (var parola in parole)
         {
             countPar++;
         }
 
-        foreach (char carattere in frase)
+        foreach (char carattere in frase4)
         {
             if(char.IsLetter(carattere))
             {
@@ -141,7 +189,7 @@ class EserciziPomeriggio
             }
         }
 
-        foreach (char carattere in frase)
+        foreach (char carattere in frase4)
         {
             if(char.IsWhiteSpace(carattere))
             {
@@ -149,7 +197,7 @@ class EserciziPomeriggio
             }
         }
 
-        foreach (char carattere in frase)
+        foreach (char carattere in frase4)
         {
             if(char.IsPunctuation(carattere))
             {
